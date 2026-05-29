@@ -1,58 +1,38 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Linux Libertine', 'Georgia', 'Times', serif;
+  line-height: 1.6;
   margin: 0;
-  background: #f8f9fa;
+  background: #f6f6f6;
   color: #202122;
 }
 
+/* Wikipedia-like container */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+  display: flex;
+  gap: 20px;
+}
+
+/* HEADER */
 .site-header {
   background: white;
   border-bottom: 1px solid #a2a9b1;
-  padding: 20px;
+  padding: 15px 20px;
 }
 
 .site-header h1 {
+  font-size: 32px;
   margin: 0;
 }
 
 .subtitle {
-  color: #555;
-}
-
-.container {
-  display: flex;
-  gap: 20px;
-  max-width: 1200px;
-  margin: auto;
-  padding: 20px;
-}
-
-.infobox {
-  width: 300px;
-  border: 1px solid #a2a9b1;
-  background: #f8f9fa;
-  padding: 10px;
-}
-
-.infobox img {
-  width: 100%;
-  border: 1px solid #a2a9b1;
-}
-
-.infobox h2 {
-  text-align: center;
-}
-
-.infobox table {
-  width: 100%;
+  color: #54595d;
   font-size: 14px;
 }
 
-.infobox th {
-  text-align: left;
-  padding: 4px;
-}
-
+/* ARTICLE AREA */
 .content {
   flex: 1;
   background: white;
@@ -60,15 +40,71 @@ body {
   border: 1px solid #a2a9b1;
 }
 
+/* Wikipedia-style headings */
 .content h2 {
+  font-size: 22px;
   border-bottom: 1px solid #a2a9b1;
   padding-bottom: 5px;
+  margin-top: 30px;
 }
 
-.content p, .content li {
-  line-height: 1.6;
+/* LINKS like Wikipedia */
+.content a {
+  color: #0645ad;
+  text-decoration: none;
 }
 
+.content a:hover {
+  text-decoration: underline;
+}
+
+/* INFOBOX */
+.infobox {
+  width: 300px;
+  background: #f8f9fa;
+  border: 1px solid #a2a9b1;
+  font-size: 14px;
+}
+
+.infobox img {
+  width: 100%;
+  border-bottom: 1px solid #a2a9b1;
+}
+
+.infobox h2 {
+  text-align: center;
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.infobox table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.infobox th {
+  text-align: left;
+  vertical-align: top;
+  padding: 4px;
+  width: 40%;
+  color: #202122;
+}
+
+/* TABLE OF CONTENTS STYLE */
+.toc {
+  background: #f8f9fa;
+  border: 1px solid #a2a9b1;
+  padding: 10px;
+  font-size: 14px;
+  width: fit-content;
+}
+
+.toc a {
+  display: block;
+  color: #0645ad;
+}
+
+/* MOBILE */
 @media (max-width: 900px) {
   .container {
     flex-direction: column;
